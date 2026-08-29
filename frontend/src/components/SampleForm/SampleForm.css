@@ -1,0 +1,24 @@
+.sample-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-server-error {
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 0.875rem;
+  border: 1px solid #fecaca;
+}
+
+@media (max-width: 520px) {
+  .sample-form-grid {
+    grid-template-columns: 1fr;
+  }
+}

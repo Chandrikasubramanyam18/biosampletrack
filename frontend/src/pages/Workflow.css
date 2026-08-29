@@ -1,0 +1,81 @@
+.workflow-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Pipeline flow */
+.pipeline-flow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.pipeline-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pipeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  border: 2px solid;
+  border-radius: var(--radius-md);
+  min-width: 72px;
+  background: var(--color-surface-alt);
+}
+
+.pipeline-count {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.pipeline-stage {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.pipeline-arrow {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.pipeline-failed {
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.failed-label {
+  font-weight: 600;
+  color: #991b1b;
+}
+
+/* Charts layout */
+.workflow-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 800px) {
+  .workflow-charts { grid-template-columns: 1fr; }
+  .pipeline-flow { gap: 4px; }
+  .pipeline-node { min-width: 60px; padding: 8px 10px; }
+}
